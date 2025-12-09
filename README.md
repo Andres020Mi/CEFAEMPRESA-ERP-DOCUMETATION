@@ -100,4 +100,62 @@ Esta arquitectura garantiza:
     y estándares modernos.
 
 
+## Infraestructura del Servidor y Despliegue con Docker
 
+El proyecto se ejecutará en un **VPS dedicado** configurado con
+**Ubuntu**, proporcionando un entorno estable, seguro y optimizado para
+entornos de producción.\
+Toda la plataforma está construida bajo una arquitectura basada en
+**contenedores Docker**, lo que permite un despliegue confiable,
+reproducible y fácil de mantener.
+
+### **Componentes principales de la infraestructura**
+
+### **1. Ubuntu como sistema base**
+
+El servidor utiliza **Ubuntu**, reconocido por su estabilidad, amplio
+soporte y compatibilidad con herramientas modernas de despliegue.\
+Este sistema operativo sirve como base para gestionar los contenedores y
+servicios del ecosistema.
+
+### **2. Docker como núcleo del despliegue**
+
+Docker permite que cada componente del sistema funcione en contenedores
+aislados, garantizando: - Independencia entre servicios\
+- Facilidad para actualizar o reemplazar módulos\
+- Escalabilidad horizontal y vertical\
+- Simplificación del mantenimiento
+
+### **3. Nginx como servidor proxy**
+
+Se utiliza **Nginx en contenedor Docker** para gestionar: - El
+enrutamiento del tráfico hacia los diferentes módulos del sistema\
+- La entrega eficiente de contenido\
+- La estabilidad y rendimiento en producción
+
+### **4. Traefik como gestor de proxy reverso y certificados SSL**
+
+**Traefik** está configurado para: - Gestionar automáticamente
+certificados **SSL** mediante Let's Encrypt\
+- Manejar enrutamiento dinámico para múltiples aplicaciones\
+- Permitir que coexistan distintos proyectos en el mismo VPS\
+- Integrarse perfectamente con Docker para reconocer servicios sin
+configuración manual adicional
+
+### **5. Orquestación de múltiples proyectos**
+
+Gracias al uso combinado de **Docker**, **Nginx** y **Traefik**, el VPS
+puede ejecutar simultáneamente: - Aplicaciones web\
+- APIs\
+- Servicios internos\
+- Paneles administrativos\
+- Módulos del ERP
+
+Todo gestionado con archivos `docker-compose.yml`, manteniendo una
+infraestructura limpia, escalable y fácil de administrar.
+
+------------------------------------------------------------------------
+
+Esta arquitectura garantiza un entorno profesional, seguro y altamente
+preparado para despliegues continuos, evitando conflictos entre
+servicios y permitiendo actualizaciones sin interrupciones.
