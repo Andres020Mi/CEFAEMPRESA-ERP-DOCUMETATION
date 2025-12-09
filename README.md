@@ -56,6 +56,8 @@ más compleja diseñada para garantizar que el sistema sea **escalable,
 reutilizable y mantenible**. Para lograrlo, se emplean tecnologías,
 patrones y arquitecturas ampliamente adoptadas y de uso gratuito.
 
+------------------------------------------------------------------------
+
 ## Arquitectura del lado del back-end
 
 ``` mermaid
@@ -99,6 +101,7 @@ Esta arquitectura garantiza:
     utilizadas aseguran un desarrollo consistente, con buenas prácticas
     y estándares modernos.
 
+------------------------------------------------------------------------
 
 ## Infraestructura del Servidor y Despliegue con Docker
 
@@ -154,8 +157,39 @@ puede ejecutar simultáneamente: - Aplicaciones web\
 Todo gestionado con archivos `docker-compose.yml`, manteniendo una
 infraestructura limpia, escalable y fácil de administrar.
 
-------------------------------------------------------------------------
+
+
+``` mermaid
+graph TD;
+
+    user[Usuario] --> dns[DNS del dominio];
+    dns --> ip[VPS (IP pública)];
+    ip --> traefik[Traefik (reverse proxy)];
+    
+    traefik --> nginx[Nginx];
+    traefik --> api[Laravel / PHP-FPM];
+
+    nginx --> api;
+
+    api --> mysql[MySQL];
+    api --> redis[Redis];
+
+    subgraph Contenedores Docker
+        nginx
+        api
+        mysql
+        redis
+        traefik
+    end
+
+    api --> result[Respuesta al usuario];
+
+```
+
 
 Esta arquitectura garantiza un entorno profesional, seguro y altamente
 preparado para despliegues continuos, evitando conflictos entre
 servicios y permitiendo actualizaciones sin interrupciones.
+
+
+
