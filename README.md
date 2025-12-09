@@ -72,5 +72,5 @@ graph TD;
     panel-->resource;
     migraciones-->resource;
     modelos-->resource;
-    resource-->vista-blade;
+    resource-->vistaBlade;
 ```
