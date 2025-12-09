@@ -66,11 +66,11 @@ graph TD;
     peticion-->ruta
     ruta-->controlador
     controlador->modulo
-    modulo->panel
-    modulo->migraciones
-    modulo->modelos
-    panel->resource
-    migraciones->resource
-    modelos->resource
-    resource->vista-blade
+    modulo-->panel
+    modulo-->migraciones
+    modulo-->modelos
+    panel-->resource
+    migraciones-->resource
+    modelos-->resource
+    resource-->vista-blade
 ```
