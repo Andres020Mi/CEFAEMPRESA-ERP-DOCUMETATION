@@ -63,7 +63,8 @@ patrones y arquitecturas ampliamente adoptadas y de uso gratuito.
 ```mermaid
 graph TD;
     user-->peticion;
-    peticion-->ruta;
+    peticion-->laravel;
+    laravel-->ruta;
     ruta-->controlador;
     controlador-->modulo;
     modulo-->panel;
@@ -74,3 +75,7 @@ graph TD;
     modelos-->resource;
     resource-->vista-blade;
 ```
+
+
+El proyecto utiliza [Laravel 12](https://laravel.com/docs/12.x/releases) como framework, para poder gestionar por modulos los recursos se utiliza [Laravel modules 12](https://github.com/nWidart/laravel-modules), y para gestionar los cruds interfaces y demas de manera eficiente usamos [Filament 4](https://filamentphp.com/docs/4.x/introduction/installation).
+
