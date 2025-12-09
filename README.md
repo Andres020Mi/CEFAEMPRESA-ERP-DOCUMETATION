@@ -56,11 +56,9 @@ más compleja diseñada para garantizar que el sistema sea **escalable,
 reutilizable y mantenible**. Para lograrlo, se emplean tecnologías,
 patrones y arquitecturas ampliamente adoptadas y de uso gratuito.
 
-## **Arquitectura del lado del back-end**
+## Arquitectura del lado del back-end
 
-
-
-```mermaid
+``` mermaid
 graph TD;
     user-->peticion;
     peticion-->laravel;
@@ -76,6 +74,30 @@ graph TD;
     resource-->vista-blade;
 ```
 
+El proyecto está construido sobre **Laravel 12**, un framework moderno y
+robusto que permite desarrollar aplicaciones escalables y mantenibles.
 
-El proyecto utiliza [Laravel 12](https://laravel.com/docs/12.x/releases) como framework, para poder gestionar por modulos los recursos se utiliza [Laravel modules 12](https://github.com/nWidart/laravel-modules), y para gestionar los cruds interfaces y demas de manera eficiente usamos [Filament 4](https://filamentphp.com/docs/4.x/introduction/installation).
+Para lograr una estructura modular y organizada, se utiliza **Laravel
+Modules 12**, el cual facilita la separación de funcionalidades en
+módulos independientes. Esto permite que distintos equipos de trabajo
+puedan colaborar sin generar conflictos en el núcleo del proyecto.
+
+Además, para la creación y gestión eficiente de interfaces
+administrativas, CRUDs y componentes visuales, se integra **Filament
+4**, una herramienta altamente personalizable que acelera el desarrollo
+del panel administrativo.
+
+Esta arquitectura garantiza:
+
+-   **Mantenibilidad elevada:** Cada módulo está aislado, permitiendo
+    actualizaciones y correcciones sin afectar el resto del sistema.
+-   **Escalabilidad:** La estructura modular facilita agregar nuevas
+    funciones o ampliar módulos existentes.
+-   **Colaboración eficiente:** Diferentes desarrolladores o equipos
+    pueden trabajar de forma independiente.
+-   **Calidad del software:** La organización clara y las herramientas
+    utilizadas aseguran un desarrollo consistente, con buenas prácticas
+    y estándares modernos.
+
+
 
