@@ -33,9 +33,7 @@ graph TD;
     funcion4-->Database
 
 
-    Database-->App1
-    Database-->App2
-    Database-->Logout
+    Database-->Opcional-Logout
 
 
 
