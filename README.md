@@ -163,8 +163,8 @@ infraestructura limpia, escalable y fácil de administrar.
 graph TD;
 
     user[Usuario] --> dns[DNS del dominio];
-    dns --> ip[VPS (IP pública)];
-    ip --> traefik[Traefik (reverse proxy)];
+    dns --> ip[VPS IP pública];
+    ip --> traefik[Traefik reverse proxy];
     
     traefik --> nginx[Nginx];
     traefik --> api[Laravel / PHP-FPM];
