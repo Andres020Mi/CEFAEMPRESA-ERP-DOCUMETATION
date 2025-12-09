@@ -62,15 +62,15 @@ patrones y arquitecturas ampliamente adoptadas y de uso gratuito.
 
 ```mermaid
 graph TD;
-    user-->peticion
-    peticion-->ruta
-    ruta-->controlador
-    controlador->modulo
-    modulo-->panel
-    modulo-->migraciones
-    modulo-->modelos
-    panel-->resource
-    migraciones-->resource
-    modelos-->resource
-    resource-->vista-blade
+    user-->peticion;
+    peticion-->ruta;
+    ruta-->controlador;
+    controlador->modulo;
+    modulo-->panel;
+    modulo-->migraciones;
+    modulo-->modelos;
+    panel-->resource;
+    migraciones-->resource;
+    modelos-->resource;
+    resource-->vista-blade;
 ```
