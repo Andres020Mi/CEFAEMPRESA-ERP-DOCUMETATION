@@ -65,12 +65,12 @@ graph TD;
     user-->peticion;
     peticion-->ruta;
     ruta-->controlador;
-    controlador->modulo;
+    controlador-->modulo;
     modulo-->panel;
     modulo-->migraciones;
     modulo-->modelos;
     panel-->resource;
     migraciones-->resource;
     modelos-->resource;
-    resource-->vistaBlade;
+    resource-->vista-blade;
 ```
