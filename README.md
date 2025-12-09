@@ -32,6 +32,11 @@ graph TD;
     funcion3-->Database
     funcion4-->Database
 
-    
+
+    Database-->App1
+    Database-->App2
+    Database-->Logout
+
+
 
 ```
