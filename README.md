@@ -8,5 +8,30 @@ Se le ofrece a los usuario una plataforma donde tengan sus credenciales, les per
 
 El software ofrece una serie de aplicaciónes que dentro tienen vistas las cuales ofrecen funciónes para administrar la información del software de manera controlada.
 
+## **Proceso basico del software**
+
+```mermaid
+graph TD;
+    User-->Login;
+    Login-->App1;
+    Login-->App2;
+    
+    App1-->funcion1
+    App1-->funcion2
 
 
+    
+    App2-->funcion3
+    App2-->funcion4
+
+
+    funcion1-->Database
+    funcion2-->Database
+
+    
+    funcion3-->Database
+    funcion4-->Database
+
+    
+
+```
